@@ -11,7 +11,7 @@ const createAccount = async (req, res, next) => {
     urlAvatar = "https://cdn-icons-png.flaticon.com/512/4205/4205813.png";
   else if (typeAccount == "FREELANCER")
     urlAvatar = "https://cdn-icons-png.flaticon.com/512/2302/2302834.png";
-  else if (typeAccount == "LEADER")
+  else if (typeAccount == "ADVISER")
     urlAvatar = "https://cdn-icons-png.flaticon.com/512/6854/6854607.png";
 
   // simple validate
@@ -34,7 +34,7 @@ const createAccount = async (req, res, next) => {
         createdAt: Date.now(),
       });
 
-      if (typeAccount === "LEADER") {
+      if (typeAccount === "ADVISER") {
         const leaderAccount = await LeaderAccount.create({
           leaderId: newAccount._id,
         });

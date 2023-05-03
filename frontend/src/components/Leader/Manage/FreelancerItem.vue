@@ -28,10 +28,10 @@
             >
                 <div class="accordion-body row">
                     <div class="col-4">
-                        <strong>Lớp: </strong> {{ freelancer.team }}
+                        <strong>Tên Domain: </strong> {{ freelancer.team }}
                     </div>
                     <div class="col-12">
-                        <strong>Tên dự án thực tập: </strong>
+                        <strong>Tên đơn vị dự án: </strong>
                         {{ freelancer.projectName }}
                     </div>
                     <div class="col-12 d-flex justify-content-center mt-4">

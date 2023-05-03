@@ -13,7 +13,7 @@ const routersModule = {
         ],
         leaderRoutes: [
             { name: "Trang chủ", path: "/leader/home" },
-            { name: "Quản lý freelancer", path: "/leader/manage" },
+            { name: "Quản lý Freelancer", path: "/leader/manage" },
         ],
         ministryRoutes: [
             { name: "Trang chủ", path: "/ministry/home" },
@@ -22,7 +22,7 @@ const routersModule = {
                 path: "/ministry/leader-management",
             },
             {
-                name: "Quản lý đơn vị thực tập",
+                name: "Quản lý đơn vị dự án",
                 path: "/ministry/project-management",
             },
         ],

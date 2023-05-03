@@ -4,15 +4,15 @@
             <div class="header-list m-0 p-2 pt-3 col-6" style="color: #2C542F">
                 <div class="d-flex align-items-center">
                     <h2 class="me-3 fw-bold">
-                        Danh sách freelancer đang quản lý
+                        Danh sách Freelancer đang làm việc
                     </h2>
-                    <img
+                    <!-- <img
                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/OOjs_UI_icon_search-ltr.svg/1200px-OOjs_UI_icon_search-ltr.svg.png"
                         alt="Lọc sinh viên"
                         data-bs-toggle="modal"
                         data-bs-target="#FreelancerFilter"
                         class="filter-icon"
-                    />
+                    /> -->
                 </div>
 
                 <div class="line mt-3 mb-2"></div>

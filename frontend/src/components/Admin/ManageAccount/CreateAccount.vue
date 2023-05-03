@@ -78,8 +78,8 @@
                                     @change="selectTypeAccount($event)"
                                     v-model="typeAccount"
                                 >
-                                    <option selected value="LEADER">
-                                        Leader
+                                    <option selected value="ADVISER">
+                                        Adviser
                                     </option>
                                     <option value="FREELANCER">Freelancer</option>
                                     <option value="PROJECT">
@@ -94,7 +94,7 @@
                                     <label
                                         for="inputClass"
                                         class="col-form-label px-0"
-                                        ><strong>Team:</strong></label
+                                        ><strong>Tên Domain:</strong></label
                                     >
                                     <input
                                         type="text"
@@ -199,7 +199,7 @@ export default {
             username: "",
             password: "",
             name: "",
-            typeAccount: "LEADER",
+            typeAccount: "ADVISER",
             freelancerTeam: "",
             // semester: "1",
             // schoolYear: "2020-2021",

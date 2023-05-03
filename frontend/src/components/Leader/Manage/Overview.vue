@@ -6,7 +6,7 @@
             style="width: 400px; height: 400px"
         />
         <h6 class="fw-bolder col-12 text-center mt-3">
-            Biểu đồ thể hiện số lượng sinh viên tại các đơn vị thực tập
+            Biểu đồ thể hiện Freelancer đang làm việc tại đơn vị dự án
         </h6>
     </div>
 </template>
@@ -48,7 +48,7 @@ export default {
                 ],
                 datasets: [
                     {
-                        label: "Số lượng sinh viên",
+                        label: "Số lượng Freelancer",
                         backgroundColor: "#1f5caa",
                         data: [40, 20, 12, 10, 3],
                     },

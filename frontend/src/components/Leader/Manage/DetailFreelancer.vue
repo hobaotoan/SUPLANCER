@@ -15,7 +15,7 @@
             />
             <div class="col-7 flex-grow-1 mt-3">
                 <div class="col-12 mb-3">
-                    <strong>MSSV: </strong> {{ freelancerActive.username }}
+                    <strong>Tên người dùng: </strong> {{ freelancerActive.username }}
                 </div>
                 <div class="col-12 mb-3">
                     <strong>Họ và tên: </strong> {{ freelancerActive.name }}
@@ -24,14 +24,14 @@
                     <strong>Email: </strong> {{ freelancerActive.email }}
                 </div>
                 <div class="col-12 mb-3">
-                    <strong>Tên dự án thực tập: </strong>
+                    <strong>Tên đơn vị dự án: </strong>
                     {{ freelancerActive.projectName }}
                 </div>
             </div>
             <div class="col-12 d-flex justify-content-around mt-3">
                 <router-link :to="'/leader/view/progress/' + freelancerActive.id">
                     <button type="button" class="btn btn-outline-warning" style="width:auto; ">
-                        Xem thông tin thực tập
+                        Xem thông tin
                     </button>
                 </router-link>
             </div>

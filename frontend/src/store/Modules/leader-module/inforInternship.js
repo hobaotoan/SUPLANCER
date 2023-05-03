@@ -39,7 +39,7 @@ const InforInternship = {
         SET_PROJECT_ASSESS(state, projectAssess) {
             state.projectAssess = projectAssess;
         },
-        SET_LEADER_ASSESS(state, leaderAssess) {
+        SET_ADVISER_ASSESS(state, leaderAssess) {
             state.leaderAssess = leaderAssess;
         },
     },
@@ -137,7 +137,7 @@ const InforInternship = {
                     params: { freelancerId: payload.id },
                 }
             );
-            commit("SET_LEADER_ASSESS", response.data.points);
+            commit("SET_ADVISER_ASSESS", response.data.points);
         },
     },
 };

@@ -18,7 +18,7 @@
                 class="dashboard-detail col-3 d-flex justify-content-around m-2"
             >
                 <div class="dashboard-infor">
-                    <p class="item__name mb-1">Tài khoản leader</p>
+                    <p class="item__name mb-1">Tài khoản Adviser</p>
                     <h3 class="item__quantity fw-bold">{{ leader }}</h3>
                 </div>
                 <img
@@ -31,7 +31,7 @@
                 class="dashboard-detail col-3 d-flex justify-content-around m-2"
             >
                 <div class="dashboard-infor">
-                    <p class="item__name mb-1">Tài khoản freelancer</p>
+                    <p class="item__name mb-1">Tài khoản Freelancer</p>
                     <h3 class="item__quantity fw-bold">{{ freelancer }}</h3>
                 </div>
                 <img
@@ -84,7 +84,7 @@ export default {
 
         for (let i = 0; i < accounts.length; i++) {
             if (accounts[i].rule == "PROJECT") this.project++;
-            else if (accounts[i].rule == "LEADER") this.leader++;
+            else if (accounts[i].rule == "ADVISER") this.leader++;
             else if (accounts[i].rule == "FREELANCER") this.freelancer++;
         }
 

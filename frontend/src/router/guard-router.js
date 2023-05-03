@@ -43,7 +43,7 @@ const guardRouter = function (router) {
             else if (rule == "PROJECT") next("/project/home");
             else if (rule == "FREELANCER") next("/freelancer/home");
             else if (rule == "MINISTRY") next("/ministry/home");
-            else if (rule == "LEADER") next("/leader/home");
+            else if (rule == "ADVISER") next("/leader/home");
         }else {
             // if accessing the site is not authorized. will be blocked
             const uri = rule || "/none";

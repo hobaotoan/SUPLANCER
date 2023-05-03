@@ -45,7 +45,7 @@
                                 v-model="time"
                             />
                             <div id="workTimelHelp" class="form-text">
-                                Đây là thời gian trễ nhất mà freelancer có thể
+                                Đây là thời gian trễ nhất mà Freelancer có thể
                                 thực hiện công việc
                             </div>
                         </div>

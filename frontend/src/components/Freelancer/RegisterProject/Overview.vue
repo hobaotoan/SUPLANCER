@@ -10,7 +10,7 @@
             />
         </div>
         <div class="mt-3">
-            Hiện đang có {{ projectList.length }} đơn vị thực tập.
+            Hiện đang có {{ projectList.length }} đơn vị dự án.
         </div>
     </div>
 </template>

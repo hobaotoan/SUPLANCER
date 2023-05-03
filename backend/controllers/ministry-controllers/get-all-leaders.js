@@ -3,7 +3,7 @@ import LeaderAccount from "../../models/LeaderAccount.js";
 
 const getAllLeaders = async function (req, res, next) {
   try {
-    const accountLeaders = await Account.find({ rule: "LEADER" });
+    const accountLeaders = await Account.find({ rule: "ADVISER" });
 
     const result = [];
 

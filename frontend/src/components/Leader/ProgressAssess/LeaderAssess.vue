@@ -22,7 +22,7 @@
                 <span style="color: green" v-else> Đã đánh giá</span>
             </p>
             <p style="color: red" v-if="!completedAssess">
-                Giảng viên chưa thể đánh giá vì đơn vị thực tập chưa hoàn tất
+                Adviser chưa thể đánh giá vì đơn vị dự án chưa hoàn tất
                 đánh giá.
             </p>
         </div>

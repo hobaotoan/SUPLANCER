@@ -1,14 +1,14 @@
 <template>
     <div class="leader-manage p-4 ">
         <div class="col-12 d-flex container">
-            <TitleStructure :title="`Danh sách freelancer`" class="col-6 me-4">
-                <img
+            <TitleStructure :title="`Danh sách Freelancer`" class="col-6 me-4">
+                <!-- <img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/OOjs_UI_icon_search-ltr.svg/1200px-OOjs_UI_icon_search-ltr.svg.png"
                     alt="Lọc sinh viên"
                     data-bs-toggle="modal"
                     data-bs-target="#FreelancerFilter"
                     class="filter-icon dashboard__img"
-                />
+                /> -->
             </TitleStructure>
             <TitleStructure :title="`Tổng quan`" class="col-6 title-detail">
             </TitleStructure>

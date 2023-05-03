@@ -14,7 +14,7 @@
             :height="height"
         />
         <h6 class="fw-bolder col-12 text-center mt-3">
-            Biểu đồ thể hiện số lượng sinh viên đăng ký thực tập
+            Biểu đồ thể hiện số lượng Freelancer đang đăng ký đơn vị dự án
         </h6>
     </div>
 </template>

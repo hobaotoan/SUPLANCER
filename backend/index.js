@@ -66,7 +66,7 @@ app.use(
 app.use(
   "/leader",
   (req, res, next) => {
-    middlewareRouter(req, res, next, "LEADER");
+    middlewareRouter(req, res, next, "ADVISER");
   },
   leaderRouter
 );

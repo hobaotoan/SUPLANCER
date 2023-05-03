@@ -16,10 +16,10 @@
             </div>
             <div class="col-7 flex-grow-1">
                 <div class="col-12 my-1">
-                    <strong>Họ tên giảng viên: </strong> {{ leader.name }}
+                    <strong>Họ tên Adviser: </strong> {{ leader.name }}
                 </div>
                 <div class="col-12 my-1">
-                    <strong>Mã số giảng viên: </strong> {{ leader.username }}
+                    <strong>Mã số Adviser: </strong> {{ leader.username }}
                 </div>
                 <div class="col-12 my-1">
                     <strong>Email: </strong> {{ leader.email }}
@@ -28,7 +28,7 @@
                     <strong>Điện thoại: </strong> {{ leader.phoneNumber }}
                 </div>
                 <div class="col-12 my-1">
-                    <strong>Quản lý lớp: </strong><br />
+                    <strong>Quản lý Domain: </strong>
                     <span
                         v-for="(item, index) in leader.teamsManagement"
                         :key="index"

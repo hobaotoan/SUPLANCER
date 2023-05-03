@@ -9,7 +9,7 @@
                         class="header-list label m-0 p-2 pt-4 fw-bold col-6"
                         style="color: #2C542F"
                     >
-                        Danh sách freelancer
+                        Danh sách Freelancer
                         <div class="line my-3"></div>
                     </h2>
                     <h2

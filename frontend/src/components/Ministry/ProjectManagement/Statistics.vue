@@ -17,7 +17,7 @@
             />
         </div>
         <h6 class="fw-bolder col-12 text-center mt-3">
-            Biểu đồ thể hiện số lượng sinh viên đang thực tập tại đơn vị
+            Biểu đồ thể hiện Freelancer đang làm việc tại đơn vị dự án
         </h6>
     </div>
 </template>
@@ -88,7 +88,7 @@ export default {
                 backgroundColor: "#f87979",
                 datasets: [
                     {
-                        label: "Số lượng sinh viên đang thực tập",
+                        label: "Số lượng Freelancer đang làm việc",
                         backgroundColor: "#f87979",
                         data: [40, 25, 31, 18, 50, 39, 80, 40, 20, 12, 11],
                     },

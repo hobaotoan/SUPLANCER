@@ -17,7 +17,7 @@ const deleteAccount = async (req, res, next) => {
 
     if (accountDeleted) {
       const rule = accountDeleted.rule;
-      if (rule === "LEADER") {
+      if (rule === "ADVISER") {
         await LeaderAccount.findOneAndDelete({
           leaderId: accountDeleted._id,
         });

@@ -65,7 +65,7 @@ export default {
         routers() {
             if (this.rule == "PROJECT") {
                 return this.getRouters.projectRoutes;
-            } else if (this.rule == "LEADER") {
+            } else if (this.rule == "ADVISER") {
                 return this.getRouters.leaderRoutes;
             } else if (this.rule == "MINISTRY") {
                 return this.getRouters.ministryRoutes;

@@ -6,7 +6,7 @@
         >
             <div class="col-12 d-flex">
                 <TitleStructure
-                    :title="`Tên dự án thực tập`"
+                    :title="`Tên dự án làm việc`"
                     class="col-6 me-4"
                 ></TitleStructure>
                 <TitleStructure
@@ -69,7 +69,7 @@
                                     <i
                                         class="bi bi-person-video3 fs-2 me-2"
                                     ></i>
-                                    <span>Xem đánh giá của leader</span>
+                                    <span>Xem đánh giá của Adviser</span>
                                 </button>
                             </router-link>
                         </div>
@@ -85,7 +85,7 @@
                 alt=""
                 style="width: 300px"
             />
-            <h3 class="text-warning mt-4">Sinh viên chưa tham gia thực tập</h3>
+            <h3 class="text-warning mt-4">Freelancer chưa tham gia dự án</h3>
         </div>
     </div>
 </template>

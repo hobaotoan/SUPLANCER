@@ -7,10 +7,10 @@
                     Tất cả tài khoản
                 </button>
                 <button type="button" class="type__item btn" id="leader" @click="handleFilter">
-                    Tài khoản leader
+                    Tài khoản Adviser
                 </button>
                 <button type="button" class="type__item btn" id="freelancer" @click="handleFilter">
-                    Tài khoản freelancer
+                    Tài khoản Freelancer
                 </button>
                 <button type="button" class="type__item btn" id="project" @click="handleFilter">
                     Tài khoản đơn vị dự án
@@ -148,7 +148,7 @@ export default {
             if (filter == "leader") {
                 this.$store.commit(
                     "SET_ACCOUNT_CURRENT",
-                    this.accounts.filter((account) => account.rule == "LEADER")
+                    this.accounts.filter((account) => account.rule == "ADVISER")
                 );
             } else if (filter == "freelancer") {
                 this.$store.commit(

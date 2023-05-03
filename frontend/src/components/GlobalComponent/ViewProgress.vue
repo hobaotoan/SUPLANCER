@@ -15,11 +15,11 @@
                     <strong>Thời gian làm việc: </strong> từ ngày
                     <span>{{ startDate }}</span>
                 </p>
-                <p v-else style="color: red">Bạn chưa tham gia thực tập</p>
+                <p v-else style="color: red">Bạn chưa tham gia dự án</p>
                 <p class="view-progress__status" v-if="startDate">
                     <strong>Trạng thái hoàn thành: </strong>
                     <span class="text-warning" v-if="!completedAssess"
-                        >Sinh viên đang thực tập</span
+                        >Freelancer đang làm việc</span
                     >
                     <span class="text-success" v-else>
                         Đã hoàn thành công việc trong dự án</span

@@ -59,7 +59,7 @@
                             class="btn btn btn-outline-primary d-flex align-items-center"
                         >
                             <i class="bi bi-eye me-1"></i>
-                            Xem danh sách sinh viên đang quản lý
+                            Xem danh sách Freelancer đang làm việc
                         </router-link>
                     </div>
                 </LeaderDetail>
@@ -108,7 +108,7 @@ export default {
                 }
             );
 
-            this.$store.commit("SET_LEADER_LIST", res.data.result);
+            this.$store.commit("SET_ADVISER_LIST", res.data.result);
         } catch (error) {
             console.log(error);
         }

@@ -49,7 +49,7 @@ const authModules = {
                 if (rule == "ADMIN") {
                     router.push("/admin/home");
                 } else if (rule == "FREELANCER") router.push("/freelancer/home");
-                else if (rule == "LEADER") router.push("/leader/home");
+                else if (rule == "ADVISER") router.push("/leader/home");
                 else if (rule == "MINISTRY") router.push("/ministry/home");
                 else if (rule == "PROJECT") router.push("/project/home");
 

@@ -14,10 +14,10 @@ const leaderModule = {
         },
     },
     mutations: {
-        SET_LEADER_LIST(state, leaderList) {
+        SET_ADVISER_LIST(state, leaderList) {
             state.leaderList = leaderList;
         },
-        SET_LEADER_DETAIL(state, leader) {
+        SET_ADVISER_DETAIL(state, leader) {
             state.leaderDetail = leader;
         },
     },
@@ -34,7 +34,7 @@ const leaderModule = {
                     },
                 }
             );
-            commit("SET_LEADER_DETAIL", res.data.result);
+            commit("SET_ADVISER_DETAIL", res.data.result);
         },
     },
 };

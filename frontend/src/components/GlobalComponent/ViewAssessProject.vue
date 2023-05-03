@@ -5,7 +5,7 @@
                 class="header-list label m-0 pt-2 fw-bold"
                 style="color: #2C542F"
             >
-                Đánh giá thực tập của đơn vị
+                Đánh giá công việc của đơn vị dự án
             </h2>
             <div class="line my-3"></div>
         </div>
@@ -14,7 +14,7 @@
                 <strong>Thời gian làm việc:</strong>
                 <span> từ ngày {{ startDate }}</span>
             </p>
-            <p v-else style="color: red">Bạn chưa tham gia thực tập</p>
+            <p v-else style="color: red">Bạn chưa tham gia dự án</p>
             <p class="assess-project__status" v-if="startDate">
                 <strong>Trạng thái hoàn thành:</strong>
                 <span style="color: green" v-if="completedAssess">

@@ -61,7 +61,7 @@ export default {
         }),
         handleViewDetail() {
             this.showDetail();
-            this.$store.commit("SET_LEADER_DETAIL", this.leader);
+            this.$store.commit("SET_ADVISER_DETAIL", this.leader);
         },
     },
     props: ["leader", "index"],

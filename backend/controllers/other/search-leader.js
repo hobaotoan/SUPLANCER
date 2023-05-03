@@ -7,7 +7,7 @@ const searchLeader = async function (req, res, next) {
     try {
         const resultSearch = await Account.find({
             $or: [{ username: regex }, { name: regex }],
-            rule: "LEADER",
+            rule: "ADVISER",
         });
 
         return resultSearch

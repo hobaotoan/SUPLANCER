@@ -15,7 +15,7 @@
                             class="modal-title fs-4 fw-bold"
                             id="exampleModalLabel"
                         >
-                            Phân công giảng viên
+                            Phân công Adviser
                         </h1>
                         <button
                             type="button"
@@ -27,7 +27,7 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="name" class="form-label fw-bold"
-                                >Tên giảng viên</label
+                                >Tên Adviser</label
                             >
                             <input
                                 type="email"
@@ -39,7 +39,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="username" class="form-label fw-bold"
-                                >Mã số giảng viên</label
+                                >Mã số Adviser</label
                             >
                             <input
                                 type="email"
@@ -51,14 +51,14 @@
                         </div>
                         <div class="mb-3">
                             <label for="name" class="form-label fw-bold"
-                                >Lớp phân công</label
+                                >Domain phân công</label
                             >
                             <select
                                 class="form-select"
                                 aria-label="select example"
                                 v-model="teamName"
                             >
-                                <option disabled value="">Chọn team</option>
+                                <option disabled value="">Tên Domain</option>
                                 <option
                                     v-for="teamName in teamsName"
                                     :key="teamName"
