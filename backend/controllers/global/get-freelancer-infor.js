@@ -22,7 +22,7 @@ const getFreelancerInfor = async (req, res, next) => {
       email,
       phoneNumber,
       urlAvatar,
-      team: freelancerAccount.team,
+      domain: freelancerAccount.domain,
       // semester: freelancerAccount.semester,
       // schoolYear: freelancerAccount.schoolYear,
       projectId:

@@ -5,7 +5,8 @@ import mongoose from "mongoose";
 const connectDB = async function(){
   try {
     // const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@internship-manager.jqaq2hg.mongodb.net/?retryWrites=true&w=majority`;
-    const uri = `mongodb://127.0.0.1:27017/test`;
+    const uri = `mongodb://127.0.0.1:27017/nln_dev
+    `;
     await mongoose.connect(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,

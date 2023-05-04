@@ -1,11 +1,11 @@
 import Account from "../../models/Account.js";
-import LeaderAccount from "../../models/LeaderAccount.js";
+import AdviserAccount from "../../models/AdviserAccount.js";
 import ProjectAccount from "../../models/ProjectAccount.js";
 import ProjectAssess from "../../models/ProjectAssess.js";
 import FormRegister from "../../models/FormRegister.js";
 import FreelancerAccount from "../../models/FreelancerAccount.js";
 import Task from "../../models/Task.js";
-import LeaderAccess from "../../models/LeaderAccess.js";
+import AdviserAccess from "../../models/AdviserAccess.js";
 import { ObjectId } from "mongodb";
 
 const deleteAccount = async (req, res, next) => {
@@ -18,8 +18,8 @@ const deleteAccount = async (req, res, next) => {
     if (accountDeleted) {
       const rule = accountDeleted.rule;
       if (rule === "ADVISER") {
-        await LeaderAccount.findOneAndDelete({
-          leaderId: accountDeleted._id,
+        await AdviserAccount.findOneAndDelete({
+          adviserId: accountDeleted._id,
         });
       }
 
@@ -43,7 +43,7 @@ const deleteAccount = async (req, res, next) => {
         await ProjectAssess.findOneAndDelete({
           freelancerId: accountDeleted._id,
         });
-        await LeaderAccess.findOneAndDelete({
+        await AdviserAccess.findOneAndDelete({
           freelancerId: accountDeleted._id,
         });
         await FormRegister.deleteMany({

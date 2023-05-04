@@ -1,25 +1,25 @@
-import leaderModule from "./leader.js";
+import adviserModule from "./adviser.js";
 import projectModule from "./project.js";
 const ministryModule = {
-    modules: { leaderModule, projectModule },
-    state() {
-        return {
-            isShowDetail: false,
-        };
+  modules: { adviserModule, projectModule },
+  state() {
+    return {
+      isShowDetail: false,
+    };
+  },
+  getters: {
+    getShowDetail(state) {
+      return state.isShowDetail;
     },
-    getters: {
-        getShowDetail(state) {
-            return state.isShowDetail;
-        },
+  },
+  mutations: {
+    SHOW_DETAIL(state) {
+      state.isShowDetail = true;
     },
-    mutations: {
-        SHOW_DETAIL(state) {
-            state.isShowDetail = true;
-        },
-        CLOSE_DETAIL(state) {
-            state.isShowDetail = false;
-        },
+    CLOSE_DETAIL(state) {
+      state.isShowDetail = false;
     },
+  },
 };
 
 export default ministryModule;

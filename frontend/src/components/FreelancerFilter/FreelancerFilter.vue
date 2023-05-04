@@ -1,50 +1,48 @@
 <template>
-    <div class="filter-freelancer d-flex align-items-center" data-backdrop="false">
-        <div
-            class="modal fade"
-            id="FreelancerFilter"
-            tabindex="-1"
-            aria-labelledby="FreelancerFilterLabel"
-            aria-hidden="true"
-        >
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1
-                            class="modal-title fs-4 fw-bold"
-                            id="FreelancerFilterLabel"
-                        >
-                            Bộ Lọc Freelancer
-                        </h1>
-                        <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                        ></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="class" class="form-label"
-                                >Chọn team</label
-                            >
-                            <select
-                                id="class"
-                                class="form-select"
-                                aria-label="Default select example"
-                                v-model="filterData.team"
-                            >
-                                <option selected value="">Tất cả</option>
-                                <option
-                                    v-for="(value, index) in teamName"
-                                    :key="index"
-                                    :value="value"
-                                >
-                                    {{ value }}
-                                </option>
-                            </select>
-                        </div>
-                        <!-- <div class="mb-3">
+  <div
+    class="filter-freelancer d-flex align-items-center"
+    data-backdrop="false"
+  >
+    <div
+      class="modal fade"
+      id="FreelancerFilter"
+      tabindex="-1"
+      aria-labelledby="FreelancerFilterLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-4 fw-bold" id="FreelancerFilterLabel">
+              Bộ Lọc Freelancer
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label for="class" class="form-label">Chọn domain</label>
+              <select
+                id="class"
+                class="form-select"
+                aria-label="Default select example"
+                v-model="filterData.domain"
+              >
+                <option selected value="">Tất cả</option>
+                <option
+                  v-for="(value, index) in domainName"
+                  :key="index"
+                  :value="value"
+                >
+                  {{ value }}
+                </option>
+              </select>
+            </div>
+            <!-- <div class="mb-3">
                             <label for="semester" class="form-label"
                                 >Học kỳ</label
                             >
@@ -76,85 +74,85 @@
                                 <option value="2023-2024">2023-2024</option>
                             </select>
                         </div> -->
-                    </div>
-                    <div class="modal-footer">
-                        <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                        >
-                            Đóng
-                        </button>
-                        <button
-                            type="button"
-                            class="btn btn-outline-warning"
-                            data-bs-dismiss="modal"
-                            @click="filterFreelancer($event)"
-                        >
-                            Lọc
-                        </button>
-                    </div>
-                </div>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Đóng
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-warning"
+              data-bs-dismiss="modal"
+              @click="filterFreelancer($event)"
+            >
+              Lọc
+            </button>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
 import { mapGetters } from "vuex";
 
-export default{
-    name: "FreelancerFilter",
-    data() {
-        return {
-            filterData: {
-                class: "",
-                // semester: "",
-                // schoolYear: "",
-            },
-        };
-    },
-    computed: {
-        ...mapGetters({
-            teamName: "getTeamName",
-            currentList: "getCurrentList",
-            freelancerList: "getFreelancerList",
-        }),
-    },
-    methods: {
-        filterFreelancer() {
-            const data = {};
-            for (let key in this.filterData) {
-                if (this.filterData[key]) {
-                    data[key] = this.filterData[key];
-                }
+export default {
+  name: "FreelancerFilter",
+  data() {
+    return {
+      filterData: {
+        class: "",
+        // semester: "",
+        // schoolYear: "",
+      },
+    };
+  },
+  computed: {
+    ...mapGetters({
+      domainName: "getTeamName",
+      currentList: "getCurrentList",
+      freelancerList: "getFreelancerList",
+    }),
+  },
+  methods: {
+    filterFreelancer() {
+      const data = {};
+      for (let key in this.filterData) {
+        if (this.filterData[key]) {
+          data[key] = this.filterData[key];
+        }
+      }
+      let resultFilter = [];
+      if (data) {
+        resultFilter = this.freelancerList.filter((freelancer) => {
+          for (let key in data) {
+            if (data[key] != freelancer[key]) {
+              return false;
             }
-            let resultFilter = [];
-            if (data) {
-                resultFilter = this.freelancerList.filter((freelancer) => {
-                    for (let key in data) {
-                        if (data[key] != freelancer[key]) {
-                            return false;
-                        }
-                    }
-                    return true;
-                });
-            } else {
-                resultFilter = this.freelancerList;
-            }
-            this.$store.commit("SET_CURRENT_LIST", resultFilter);
-        },
+          }
+          return true;
+        });
+      } else {
+        resultFilter = this.freelancerList;
+      }
+      this.$store.commit("SET_CURRENT_LIST", resultFilter);
     },
+  },
 };
 </script>
 
 <style>
 .filter-icon:hover {
-    cursor: pointer;
-    opacity: 0.8;
+  cursor: pointer;
+  opacity: 0.8;
 }
 .filter-icon {
-    width: 30px;
-    height: 30px;
+  width: 30px;
+  height: 30px;
 }
 </style>

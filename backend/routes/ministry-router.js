@@ -2,10 +2,10 @@ import express from "express";
 
 import addProjectController from "../controllers/other/add-project.js";
 
-import assignLeader from "../controllers/ministry-controllers/assign-leader.js";
-import getAllLeaders from "../controllers/ministry-controllers/get-all-leaders.js";
+import assignAdviser from "../controllers/ministry-controllers/assign-adviser.js";
+import getAllAdvisers from "../controllers/ministry-controllers/get-all-advisers.js";
 import getAllCompanies from "../controllers/ministry-controllers/get-all-projects.js";
-import getInforLeader from "../controllers/ministry-controllers/get-infor-leader.js";
+import getInforAdviser from "../controllers/ministry-controllers/get-infor-adviser.js";
 import getInforAssign from "../controllers/ministry-controllers/get-infor-assign.js";
 import getFreelancerManaged from "../controllers/ministry-controllers/get-freelancer-managed.js";
 
@@ -17,22 +17,22 @@ router.get("/", (req, res) => {
 
 router.post(addProjectController);
 
-// Assign leader
-router.post("/assign-leader", assignLeader);
+// Assign adviser
+router.post("/assign-adviser", assignAdviser);
 
-// Get all leaders
-router.get("/get-all-leaders", getAllLeaders);
+// Get all advisers
+router.get("/get-all-advisers", getAllAdvisers);
 
 // Get all companies
 router.get("/get-all-companies", getAllCompanies);
 
-// Get detail infor leader
-router.get("/get-infor-leader", getInforLeader);
+// Get detail infor adviser
+router.get("/get-infor-adviser", getInforAdviser);
 
-// Get infor assign leader
+// Get infor assign adviser
 router.get("/get-infor-assign", getInforAssign);
 
-// Get freelancer managed by leader
+// Get freelancer managed by adviser
 router.get("/get-freelancer-managed", getFreelancerManaged);
 
 export default router;

@@ -3,12 +3,12 @@ const getInforAssign = async function (req, res, next) {
   try {
     const freelancerList = await FreelancerAccount.find({});
 
-    const teamsName = [];
+    const domainsName = [];
     //const schoolYears = [];
 
     for (let i = 0; i < freelancerList.length; i++) {
-      if (!teamsName.includes(freelancerList[i].team)) {
-        teamsName.push(freelancerList[i].team);
+      if (!domainsName.includes(freelancerList[i].domain)) {
+        domainsName.push(freelancerList[i].domain);
       }
 
       // if (!schoolYears.includes(freelancerList[i].schoolYear))
@@ -16,13 +16,13 @@ const getInforAssign = async function (req, res, next) {
     }
 
     const result = {
-      teamsName: teamsName.sort(),
+      domainsName: domainsName.sort(),
       //schoolYears: schoolYears.sort(),
     };
 
     return res.json({
       status: true,
-      message: "Lấy thông tin team thành công!",
+      message: "Lấy thông tin domain thành công!",
       result,
     });
   } catch (error) {

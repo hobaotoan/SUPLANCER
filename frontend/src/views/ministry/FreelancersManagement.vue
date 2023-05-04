@@ -1,16 +1,16 @@
 <template>
-    <div>
-        <LeaderDetail />
-        <FreelancersList />
-    </div>
+  <div>
+    <AdviserDetail />
+    <FreelancersList />
+  </div>
 </template>
 
 <script>
-import LeaderDetail from "../../components/Ministry/LeaderManagement/LeaderDetail.vue";
+import AdviserDetail from "../../components/Ministry/AdviserManagement/AdviserDetail.vue";
 import FreelancersList from "../../components/Ministry/FreelancersManagement/FreelancersList.vue";
 export default {
-    name: "FreelancerManagement",
-    components: { LeaderDetail, FreelancersList },
+  name: "FreelancerManagement",
+  components: { AdviserDetail, FreelancersList },
 };
 </script>
 

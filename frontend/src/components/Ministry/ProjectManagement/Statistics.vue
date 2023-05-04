@@ -1,104 +1,98 @@
 <template>
-    <div>
-        <div
-            class="statistics d-flex justify-content-center animate__fadeIn animate__animated"
-        >
-            <Bar
-                :chart-options="chartOptions"
-                :chart-data="chartData"
-                :chart-id="chartId"
-                :dataset-id-key="datasetIdKey"
-                :plugins="plugins"
-                :css-classes="cssClasses"
-                :styles="styles"
-                :width="width"
-                :height="height"
-                style="width: 500px"
-            />
-        </div>
-        <h6 class="fw-bolder col-12 text-center mt-3">
-            Biểu đồ thể hiện Freelancer đang làm việc tại đơn vị dự án
-        </h6>
+  <div>
+    <div
+      class="statistics d-flex justify-content-center animate__fadeIn animate__animated"
+    >
+      <Bar
+        :chart-options="chartOptions"
+        :chart-data="chartData"
+        :chart-id="chartId"
+        :dataset-id-key="datasetIdKey"
+        :plugins="plugins"
+        :css-classes="cssClasses"
+        :styles="styles"
+        :width="width"
+        :height="height"
+        style="width: 500px"
+      />
     </div>
+    <h6 class="fw-bolder col-12 text-center mt-3">
+      Biểu đồ thể hiện Freelancer đang làm việc tại đơn vị dự án
+    </h6>
+  </div>
 </template>
 
 <script>
 import { Bar } from "vue-chartjs";
 import {
-    Chart as ChartJS,
-    Title,
-    Tooltip,
-    Legend,
-    BarElement,
-    CategoryScale,
-    LinearScale,
+  Chart as ChartJS,
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale,
 } from "chart.js";
 
 ChartJS.register(
-    Title,
-    Tooltip,
-    Legend,
-    BarElement,
-    CategoryScale,
-    LinearScale
+  Title,
+  Tooltip,
+  Legend,
+  BarElement,
+  CategoryScale,
+  LinearScale
 );
 export default {
-    name: "StatisticsLeader",
-    components: { Bar },
-    props: {
-        chartId: {
-            type: String,
-            default: "bar-chart",
-        },
-        datasetIdKey: {
-            type: String,
-            default: "label",
-        },
-        width: {
-            type: Number,
-            default: 400,
-        },
-        height: {
-            type: Number,
-            default: 400,
-        },
-        cssClasses: {
-            default: "",
-            type: String,
-        },
-        styles: {
-            type: Object,
-            default: () => {},
-        },
-        plugins: {
-            type: Object,
-            default: () => {},
-        },
+  name: "StatisticsAdviser",
+  components: { Bar },
+  props: {
+    chartId: {
+      type: String,
+      default: "bar-chart",
     },
-    data() {
-        return {
-            chartData: {
-                labels: [
-                    "Axon Active",
-                    "SPS",
-                    "TechBase",
-                    "Viettel",
-                    "S3 Corp",
-                ],
-                backgroundColor: "#f87979",
-                datasets: [
-                    {
-                        label: "Số lượng Freelancer đang làm việc",
-                        backgroundColor: "#f87979",
-                        data: [40, 25, 31, 18, 50, 39, 80, 40, 20, 12, 11],
-                    },
-                ],
-            },
-            chartOptions: {
-                responsive: true,
-            },
-        };
+    datasetIdKey: {
+      type: String,
+      default: "label",
     },
+    width: {
+      type: Number,
+      default: 400,
+    },
+    height: {
+      type: Number,
+      default: 400,
+    },
+    cssClasses: {
+      default: "",
+      type: String,
+    },
+    styles: {
+      type: Object,
+      default: () => {},
+    },
+    plugins: {
+      type: Object,
+      default: () => {},
+    },
+  },
+  data() {
+    return {
+      chartData: {
+        labels: ["Axon Active", "SPS", "TechBase", "Viettel", "S3 Corp"],
+        backgroundColor: "#f87979",
+        datasets: [
+          {
+            label: "Số lượng Freelancer đang làm việc",
+            backgroundColor: "#f87979",
+            data: [40, 25, 31, 18, 50, 39, 80, 40, 20, 12, 11],
+          },
+        ],
+      },
+      chartOptions: {
+        responsive: true,
+      },
+    };
+  },
 };
 </script>
 

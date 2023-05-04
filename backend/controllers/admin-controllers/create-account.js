@@ -1,7 +1,7 @@
 import Account from "../../models/Account.js";
 import ProjectAccount from "../../models/ProjectAccount.js";
 import FreelancerAccount from "../../models/FreelancerAccount.js";
-import LeaderAccount from "../../models/LeaderAccount.js";
+import AdviserAccount from "../../models/AdviserAccount.js";
 import argon2 from "argon2";
 
 const createAccount = async (req, res, next) => {
@@ -35,14 +35,14 @@ const createAccount = async (req, res, next) => {
       });
 
       if (typeAccount === "ADVISER") {
-        const leaderAccount = await LeaderAccount.create({
-          leaderId: newAccount._id,
+        const adviserAccount = await AdviserAccount.create({
+          adviserId: newAccount._id,
         });
         return res.json({
           status: true,
           message: "Tạo mới một tài khoản thành công!",
           newAccount,
-          leaderAccount,
+          adviserAccount,
         });
       }
 
@@ -59,7 +59,7 @@ const createAccount = async (req, res, next) => {
 
         const freelancerAccount = await FreelancerAccount.create({
           freelancerId: newAccount._id,
-          team: freelancerTeam,
+          domain: freelancerTeam,
           // semester,
           // schoolYear,
         });

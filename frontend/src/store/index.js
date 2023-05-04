@@ -1,5 +1,5 @@
 import { createStore } from "vuex";
-import leaderModule from "./Modules/leader-module/index.js";
+import adviserModule from "./Modules/adviser-module/index.js";
 import freelancerModule from "./Modules/freelancer-module/index.js";
 import authModule from "./Modules/authModule.js";
 import routersModule from "./Modules/routersModule";
@@ -13,18 +13,18 @@ import ministryModule from "./Modules/ministry-module";
 
 // Create a new store instance.
 const store = createStore({
-    modules: {
-        leaderModule,
-        freelancerModule,
-        authModule,
-        routersModule,
-        projectModule,
-        modalModule,
-        toastModule,
-        accountModule,
-        adminModule,
-        ministryModule,
-    },
+  modules: {
+    adviserModule,
+    freelancerModule,
+    authModule,
+    routersModule,
+    projectModule,
+    modalModule,
+    toastModule,
+    accountModule,
+    adminModule,
+    ministryModule,
+  },
 });
 
 export default store;

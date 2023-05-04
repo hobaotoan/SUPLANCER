@@ -8,7 +8,7 @@ import cors from "cors";
 import adminRouter from "./routes/admin-router.js";
 import ministryRouter from "./routes/ministry-router.js";
 import freelancerRouter from "./routes/freelancer-router.js";
-import leaderRouter from "./routes/leader-router.js";
+import adviserRouter from "./routes/adviser-router.js";
 import projectRouter from "./routes/project-router.js";
 import authRouter from "./routes/auth-router.js";
 import getAccount from "./controllers/global/getAccount.js";
@@ -64,11 +64,11 @@ app.use(
 );
 
 app.use(
-  "/leader",
+  "/adviser",
   (req, res, next) => {
     middlewareRouter(req, res, next, "ADVISER");
   },
-  leaderRouter
+  adviserRouter
 );
 
 app.use(

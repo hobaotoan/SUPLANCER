@@ -1,30 +1,30 @@
 import Account from "../../models/Account.js";
 import FreelancerAccount from "../../models/FreelancerAccount.js";
-import LeaderAccount from "../../models/LeaderAccount.js";
+import AdviserAccount from "../../models/AdviserAccount.js";
 import { ObjectId } from "mongodb";
 
 const getFreelancerManaged = async function (req, res, next) {
   try {
-    const { leaderId } = req.query;
+    const { adviserId } = req.query;
 
-    const leader = await LeaderAccount.findOne({
-      leaderId: ObjectId(leaderId),
+    const adviser = await AdviserAccount.findOne({
+      adviserId: ObjectId(adviserId),
     });
 
-    // Get team managed by leader
-    const teams = [];
+    // Get domain managed by adviser
+    const domains = [];
 
-    for (let i = 0; i < leader.teamsManagement.length; i++) {
-      if (!teams.includes(leader.teamsManagement[i].teamName))
-        teams.push(leader.teamsManagement[i].teamName);
+    for (let i = 0; i < adviser.domainsManagement.length; i++) {
+      if (!domains.includes(adviser.domainsManagement[i].domainName))
+        domains.push(adviser.domainsManagement[i].domainName);
     }
 
-    // Get freelancer in team
+    // Get freelancer in domain
     const freelancerIds = [];
 
-    for (let i = 0; i < teams.length; i++) {
+    for (let i = 0; i < domains.length; i++) {
       const freelancers = await FreelancerAccount.find({
-        team: teams[i],
+        domain: domains[i],
       });
 
       for (let j = 0; j < freelancers.length; j++) {
@@ -48,7 +48,7 @@ const getFreelancerManaged = async function (req, res, next) {
         name,
         phoneNumber,
         email,
-        team: freelancerIds[i].team,
+        domain: freelancerIds[i].domain,
         // semester: freelancerIds[i].semester,
         // schoolYear: freelancerIds[i].schoolYear,
       });
@@ -56,8 +56,8 @@ const getFreelancerManaged = async function (req, res, next) {
 
     res.json({
       status: true,
-      message: "Lấy danh sách Fureelancer được quản lý bởi Leader thành công!",
-      teams,
+      message: "Lấy danh sách Fureelancer được quản lý bởi Adviser thành công!",
+      domains,
       result: freelancerList,
     });
   } catch (error) {

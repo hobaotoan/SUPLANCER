@@ -7,7 +7,7 @@ import updateFreelancerInfor from "../controllers/freelancer-controllers/update-
 import getFreelancerInfor from "../controllers/global/get-freelancer-infor.js";
 import getProjectInfor from "../controllers/global/get-project-infor.js";
 import getProjectAssess from "../controllers/global/get-project-assess.js";
-import getLeaderAssess from "../controllers/global/get-leader-assess.js";
+import getAdviserAssess from "../controllers/global/get-adviser-assess.js";
 const router = express.Router();
 
 //GET All Project
@@ -22,11 +22,11 @@ router.get("/get-all-task", getAllTasks);
 
 router.get("/get-project-assess", getProjectAssess);
 
-router.get("/get-assess", getLeaderAssess);
+router.get("/get-assess", getAdviserAssess);
 
 router.post("/register-project", registerProject);
 
-// Get leader assess
-router.get("/get-leader-assess", getLeaderAssess);
+// Get adviser assess
+router.get("/get-adviser-assess", getAdviserAssess);
 
 export default router;
