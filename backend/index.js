@@ -96,6 +96,7 @@ app.post("/update-profile", upload.single("avatar"), uploadProfile);
 
 app.use("/", authRouter);
 
+
 //Catch
 app.use((req, res, next) => {
   const err = new Error();
