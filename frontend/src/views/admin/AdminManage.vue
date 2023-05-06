@@ -53,7 +53,7 @@
               <th class="text-center" scope="row">
                 {{ index + 1 }}
               </th>
-              <td class="text-center">{{ account.username }}</td>
+              <td class="text-center" >{{ account.username }}</td>
               <td class="text-center">{{ account.name }}</td>
               <td class="text-center">{{ account.rule }}</td>
               <td class="text-center">

@@ -40,10 +40,10 @@ export default {
         chartData() {
             return {
                 labels: [
-                    "TMA",
-                    "Ngân hàng Thương tín",
-                    "NFQ Asia",
-                    "Tập đoàn Trường Phát",
+                    "DESIGNVISION",
+                    "TECHCONNECT",
+                    "Tạp chí VOGUE",
+                    "COLLABORATION",
                     "Khác",
                 ],
                 datasets: [

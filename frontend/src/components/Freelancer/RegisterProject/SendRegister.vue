@@ -67,7 +67,7 @@
                                 <label
                                     for="inputLanguage"
                                     class="col-3 col-form-label px-0"
-                                    ><strong>Công nghệ:</strong></label
+                                    ><strong>Kỹ năng:</strong></label
                                 >
                                 <div class="col-9">
                                     <input
@@ -82,7 +82,7 @@
                                 <label
                                     for="textareaProject"
                                     class="col-3 col-form-label px-0"
-                                    ><strong>Dự án:</strong></label
+                                    ><strong>Dự án đã từng tham gia:</strong></label
                                 >
                                 <div class="col-9">
                                     <textarea
